@@ -12,7 +12,7 @@ import {
 export const testsGeb = (
     gebProvider: GebProviderInterface,
     rpcUrl: string,
-    networkName: 'kovan' | 'mainnet',
+    networkName: 'kovan' | 'mainnet' | 'RSK_testnet',
     addresses: ContractList
 ) => {
     describe(`Generic provider and network. Using ${networkName} RPC: ${rpcUrl}`, async () => {

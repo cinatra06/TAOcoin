@@ -13,3 +13,5 @@ export const MAKER_MAINNET_NODE =
 export const INFURA_KOVAN =
     'https://kovan.infura.io/v3/7a5c8172af0d41fd896a18dd1d866f87'
 export const WAD = ethers.BigNumber.from('1000000000000000000')
+export const SOVRYN_RSKTEST_RPC = 'https://testnet.sovryn.app/rpc'
+export const SOVRYN_RSKMAIN_RPC = 'https://mainnet.sovryn.app/rpc'

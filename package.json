@@ -61,6 +61,7 @@
         "*.{js,md,json,ts}": "prettier --write"
     },
     "dependencies": {
+        "@reflexer-finance/geb-contract-base": "^1.1.13",
         "axios": "^0.21.1"
     }
 }
