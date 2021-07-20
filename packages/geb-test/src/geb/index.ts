@@ -7,6 +7,8 @@ import { KOVAN_ADDRESSES, MAINNET_ADDRESSES, RSKTEST_ADDRESSES } from 'geb.js'
 
 describe('Test Geb', async () => {
     // Kovan
+
+    /*
     const providerKovan = new ethers.providers.StaticJsonRpcProvider(
         MAKER_KOVAN_NODE
     )
@@ -36,6 +38,7 @@ describe('Test Geb', async () => {
         'mainnet',
         MAINNET_ADDRESSES
     )
+    */
     const gebProviderRSKTest = new ethers.providers.StaticJsonRpcProvider(
         SOVRYN_RSKTEST_RPC
     )

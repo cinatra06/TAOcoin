@@ -14,6 +14,7 @@ import {
 import {
     KOVAN_ADDRESSES,
     MAINNET_ADDRESSES,
+    RSKTEST_ADDRESSES,
     GebDeployment,
     ContractList,
     ContractKey,
