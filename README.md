@@ -1,4 +1,4 @@
-#TAO COIN
+# TAO COIN
 
 This is the full Codebase For the TAO Coin and TAO Decentralised Time deposit(staking) contracts, with exponential Returns.
 
