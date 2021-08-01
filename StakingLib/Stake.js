@@ -10,6 +10,9 @@ const { expect } = require('chai');
 const TAO = artifacts.require('TAO');
 const StakeAmt = process.env.STAKE;
 const Stakefull = StakeAmt * 10**18;
+const wallet = Wallet.fromMnemonic(process.env.MNEMONIC);
+const addr = wallet.address;
+
 
 function fsReadFileSynchToArray (filePath) {
     var data = JSON.parse(fs.readFileSync(filePath));
@@ -24,6 +27,7 @@ module.exports = async (callback) => {
     console.log('stall12');
 
     const coin2 = await Coin;
+    await coin2.approve(addr, String(100000*10**18)) //update if staking over 100,000 TAO
 
     coin2.unstake(Stakefull);
     console.log("Staked "+ StakeAmt.toString + "TAO!")
