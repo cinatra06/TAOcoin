@@ -16,7 +16,7 @@ Mathematically, TAO offers bonus interest in proportion to the square of the day
 
 # Staking Contract interface
 
-We will shortly be updating this page with an easy-to-use staking CLI libraries. For now, anyone can stake by directly calling the "stake" and "unstake" functions directly on the contract address above.
+We provide an easy-to-use staking CLI libraries.
 
 To Stake TAO:
 
@@ -39,11 +39,12 @@ export MNEMONIC = "mountain clouds ... "
 export UNSTAKE = <unstake amount in TAO>
 ```
 
-2. Give stake command:
+2. Give unstake command:
 ```
 truffle run StakingLib/unStake.js
 ```
 
+In addition, anyone can also stake by directly calling the "stake" and "unstake" functions directly on the contract address above.
 
 The functions are fairly intutive and only take _amount_ as an argument.
 You cannot stake again without withdrawing your previous stake. Unstake has a sanity check that staked amount >= unstake requested.
