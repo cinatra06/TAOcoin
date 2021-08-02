@@ -1,19 +1,18 @@
+// This script is for one-time Admin use only
+// Proof of renounciation: 0x07804616dc9a35b8f131151057f4434803eff6cdf9ea8472e811b1fe7cc148ec
 
 const { BN, constants, expectEvent, expectRevert, expectThrow } = require('@openzeppelin/test-helpers');
 const { ZERO_ADDRESS } = constants;
-// const { DATAFILE2} = require('./filedata.json')
 var fs = require('fs');
 
 const { expect } = require('chai');
-// const { web3 } = require('web3')
 const { ethers } = require('ethers');
-const { web3 } = require('web3');
 
 
 const TAO = artifacts.require('TAO');
-const UNStakeAmt = process.env.UNSTAKE;
+const StakeAmt = process.env.STAKE;
 // const UNStakefull = web3.utils.toWei(UNStakeAmt);
-const UNStakefull = ethers.utils.parseEther(String(UNStakeAmt));
+const Stakefull = ethers.utils.parseEther(String(StakeAmt));
 const wallet = new ethers.Wallet.fromMnemonic(process.env.MNEMONIC);
 const addr = wallet.address;
 
@@ -25,18 +24,16 @@ function fsReadFileSynchToArray (filePath) {
 
 module.exports = async (callback) => {
     const Coin = TAO.at("0x9FD4969573F9DEC7882409709C9B35F2dc3074ca");
+    // let destadd = '0x4eA82B28708c2428d4FF04bB40cf61ca02EbF721';
     const l = [];
+    // console.log('coin connected');
 
     const coin2 = await Coin;
-    console.log('TAOcoin connected');
+    console.log('TAOcoin contract connected');
 
-    // const numapp = ethers.utils.parseEther("100000");
-    // const approval = await coin2.approve(addr, numapp);
-    // console.log("approval done");
-    // console.log(approval);
 
-    const txn = await coin2.unstake(UNStakefull);
+    const txn = await coin2.renounceOwnership();
+    // console.log("Staked "+ StakeAmt.toString + "TAO!")
     console.log(txn);
-    console.log("Unstaked TAO!")
-
+    console.log("Renounced Ownership")
   }
