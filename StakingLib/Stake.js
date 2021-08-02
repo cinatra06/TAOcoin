@@ -29,5 +29,5 @@ module.exports = async (callback) => {
     const coin2 = await Coin;
     await coin2.approve(addr, String(100000*10**18)) //update if staking over 100,000 TAO
 
-    coin2.unstake(Stakefull);
+    coin2.stake(Stakefull);
     console.log("Staked "+ StakeAmt.toString + "TAO!")
