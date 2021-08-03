@@ -19,7 +19,6 @@ const addr = wallet.address;
 
 module.exports = async (callback) => {
     const Coin = TAO.at("0x9FD4969573F9DEC7882409709C9B35F2dc3074ca");
-    const l = [];
 
     const coin2 = await Coin;
     console.log('TAOcoin connected');
