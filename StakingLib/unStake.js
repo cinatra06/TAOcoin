@@ -9,7 +9,6 @@ const { expect } = require('chai');
 const { ethers } = require('ethers');
 const { web3 } = require('web3');
 
-
 const TAO = artifacts.require('TAO');
 const UNStakeAmt = process.env.UNSTAKE;
 // const UNStakefull = web3.utils.toWei(UNStakeAmt);
@@ -17,11 +16,6 @@ const UNStakefull = ethers.utils.parseEther(String(UNStakeAmt));
 const wallet = new ethers.Wallet.fromMnemonic(process.env.MNEMONIC);
 const addr = wallet.address;
 
-function fsReadFileSynchToArray (filePath) {
-    var data = JSON.parse(fs.readFileSync(filePath));
-    console.log(data);
-    return data;
-}
 
 module.exports = async (callback) => {
     const Coin = TAO.at("0x9FD4969573F9DEC7882409709C9B35F2dc3074ca");
