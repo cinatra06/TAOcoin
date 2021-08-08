@@ -25,6 +25,7 @@ We provide an easy-to-use staking CLI libraries.
 First, clone the TAO-lib:
 ```
 git clone https://github.com/cinatra06/TAOcoin
+cd TAOcoin
 ```
 
 To Stake TAO:
