@@ -22,6 +22,11 @@ Mathematically, TAO offers bonus interest in proportion to the square of the day
 
 We provide an easy-to-use staking CLI libraries.
 
+First, clone the TAO-lib:
+```
+git clone https://github.com/cinatra06/TAOcoin
+```
+
 To Stake TAO:
 
 1. Export ENV variables:
