@@ -26,6 +26,7 @@ First, clone the TAO-lib:
 ```
 git clone https://github.com/cinatra06/TAOcoin
 cd TAOcoin
+npm install
 ```
 
 To Stake TAO:
